@@ -1,0 +1,21 @@
+
+# Byte-compiled files
+_pycache_/
+*.py[cod]
+
+# VS Code settings
+.vscode/
+
+# Python environment
+env/
+venv/
+*.env
+
+# MacOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Other
+*.sqlite3
