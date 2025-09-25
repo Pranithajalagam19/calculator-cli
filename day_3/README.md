@@ -1,0 +1,2 @@
+
+This is a lightweight Python tool that automatically fetches and extracts top news headlines from public websites using requests and BeautifulSoup. Just clone the repo, install the required libraries, and run the scrape_headlines.py script. It prints the latest headlines to the console and saves them to top_headlines.txt for easy access and further use.

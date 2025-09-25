@@ -1,0 +1,24 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.bbc.com/news"
+
+response = requests.get(url)
+response.raise_for_status()
+
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Extract headlines from <h2> tags
+headlines = soup.find_all('h2')
+print(f'Number of <h2> headline tags found: {len(headlines)}')
+
+headline_texts = [h.get_text(strip=True) for h in headlines]
+for headline in headline_texts:
+    print(headline)
+
+# Save headlines to file
+with open('top_headlines.txt', 'w', encoding='utf-8') as file:
+    for headline in headline_texts:
+        file.write(headline + '\n')
+
+print("Headlines saved to top_headlines.txt")
